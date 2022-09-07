@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ButtonVariant } from './Button';
 
 interface ButtonProps {
-  variant?: ButtonVariant;
+  variant: ButtonVariant;
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -11,7 +11,7 @@ export const Button = styled.button<ButtonProps>`
   border-radius: 2.5px;
   cursor: pointer;
   padding: 7px 14px;
-  ${(props) => cssPropertiesFor(props.variant!)}
+  ${(props) => cssPropertiesFor(props.variant)}
 `;
 
 function cssPropertiesFor(variant: ButtonVariant) {
